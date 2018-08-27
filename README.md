@@ -1,4 +1,4 @@
-# science-linetime
+# ScienceLinetime
 
 ## TODOS:
 
