@@ -1,0 +1,88 @@
+html body {
+    background-color: #D3D3D3;
+    font-family: "Calibri", sans-serif;
+    color: #fff;
+  }
+
+  .container {
+    width: 24em;
+    height: 100%;
+    margin: auto;
+    padding: 50px;
+    background: #2E4A62;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .timeline {
+    margin: 5px 45px;
+  }
+
+  .timeline ul {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .timeline ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 100%;
+  }
+
+  .timeline ul li {
+    position: relative;
+    margin: 50px 35px;
+    width: 100%;
+  }
+
+  .timeline ul li>span {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 0px;
+    height: 100%;
+    border: 2px solid #fff;
+  }
+
+  .timeline ul li>span::before,
+  .timeline ul li>span::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    left: -7px;
+    background-color: #4e9bfa;
+  }
+
+  .timeline ul li>span::before {
+    top: -15px;
+  }
+
+  .timeline ul li>span::after {
+    top: 100%;
+  }
+
+  .timeline ul li .year span {
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    left: -90px;
+    width: 40px;
+    text-align: right;
+  }
+
+  .timeline ul li .year span:first-child {
+    top: -15px;
+  }
+
+  .timeline ul li .year span:last-child {
+    top: 100%;
+  }

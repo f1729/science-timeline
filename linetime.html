@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Science Timeline</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="lineStyle.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app" class="container">
+    <h4>Timeline
+      </h2>
+      <div class="timeline">
+        <ul>
+          <li v-for="(info, index) in timeline_data" v-bind:key="index">
+            <span></span>
+            <div style="font-size: 16px; font-weight: bold">{{ info.school }}</div>
+            <div style="font-size: 16px">{{ info.address }}</div>
+            <div style="font-style:italic">{{ info.course }}</div>
+            <div class="year">
+              <span>{{ info.yearEnd }}</span>
+              <span>{{ info.yearStart }}</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+  </div>
+  <script type="text/javascript" src="line.js"></script>
+</body>
+</html>
