@@ -10,10 +10,7 @@
 
 <body>
 
-  <div class="lineTime">
-    
-  </div>
-
+ 
   <div id="app" class="container">
     <h4>Timeline</h4>
 
@@ -32,32 +29,40 @@
           </li>
         </ul>
     </div>
+    <div v-if="active">
+      <div class="ui card" v-for="scientist in scientists">
+          <!-- <div class="image">
+            <img v-bind:src="scientist.img">
+          </div> -->
+          <div class="content">
+            <a class="header">{{scientist.name}}</a>
+            <div class="meta">
+              <span class="date">{{scientist.birth}}</span>
+            </div>
+            <div class="description">
+              {{scientist.biography}}
+            </div>
+          </div>
+          <div class="extra content">
+            <a>
+              <i class="user icon"></i>
+              22 Friends
+            </a>
+          </div>
+      </div>
+    </div> 
+    <div v-on:mouseover="active = !active">
+        <div class="ui card" v-for="scientist in scientists">
+            <div class="image2">
+              <img v-bind:src="scientist.img">
+            </div>
+        </div>
+     </div>
 
     
-
-    <div class="ui card" v-for="scientist in scientists">
-        <div class="image">
-          <img v-bind:src="scientist.img">
-        </div>
-        <div class="content">
-          <a class="header">{{scientist.name}}</a>
-          <div class="meta">
-            <span class="date">{{scientist.birth}}</span>
-          </div>
-          <div class="description">
-            {{scientist.biography}}
-          </div>
-        </div>
-        <div class="extra content">
-          <a>
-            <i class="user icon"></i>
-            22 Friends
-          </a>
-        </div>
-    </div>
   </div>
 
-  
+
 
   <script type="text/javascript" src="line.js"></script>
 </body>

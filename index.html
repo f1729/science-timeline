@@ -2,13 +2,15 @@
 <html>
 
 <head>
-  <title>Science Timeline</title>
+  
   <style type="text/css">
     .round {
       border-radius: 50%;
       width: 100px;
       height: 100px;
     }
+    .hidden { display: none; }
+    .trigger:hover + .hidden { display: inline; }
   </style>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.css">
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -37,6 +39,7 @@
         </a>
       </div>
     </div>
+
   </div>
 
   <script type="text/javascript">
@@ -64,6 +67,7 @@
             biography: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'
           },
         ],
+        active: false
       },
       methods: {
         cambiarSaludo() {
@@ -78,6 +82,7 @@
       }
     })
   </script>
+  
 </body>
 
 </html>
