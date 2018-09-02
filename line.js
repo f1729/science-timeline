@@ -2,28 +2,43 @@ new Vue({
     el: '#app',
     data() {
       return {
-        timeline_data: [
+        scientists: [
           {
-            "school":"Ateneo de Davao University",
-            "address":"Roxas Ave, Poblacion District, Davao City",
-            "course":"BS in Information Technology",
-            "yearStart":"2009",
-            "yearEnd":"2014"
+            name: 'Stephen Hawking',
+            img: 'https://www.famousbirthdays.com/faces/hawking-stephen-image.jpg',
+            birth: 'xxxx',
+            biography: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+            years:"2009",
           },
           {
-            "school":"St. Mary's College",
-            "address":"Daang Maharlika Highway, Tagum City",
-            "course":"",
-            "yearStart":"2005",
-            "yearEnd":"2009"
+            name: 'Albert Einstein',
+            img: 'https://i.ebayimg.com/images/g/XAAAAMXQ8odRGWQv/s-l300.jpg',
+            birth: 'xxxx',
+            biography: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+            "years":"2005",
+          },        
+          {
+            name: 'Heydy Mayumy',
+            img: 'https://www.famousbirthdays.com/faces/tesla-nikola-image.jpg',
+            birth: 'xxxx',
+            biography: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+            years:"1998"
           },
           {
-            "school":"Magugpo Pilot Imelda Elementary School",
-            "address":"Sobrecary St, Tagum City",
-            "course":"",
-            "yearStart":"1999",
-            "yearEnd":"2005"
+            name: 'Diana Alderete',
+            img: 'https://www.famousbirthdays.com/faces/tesla-nikola-image.jpg',
+            birth: 'xxxx',
+            biography: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+            years:"1993"
+          },
+          {
+            name: 'Nikola Tesla',
+            img: 'https://www.famousbirthdays.com/faces/tesla-nikola-image.jpg',
+            birth: 'xxxx',
+            biography: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+            "years":"2005"
           }
+          
         ]
       }
     }
