@@ -31,30 +31,40 @@
     <div id="app">
         <l-map :zoom="3" :center="center">
           <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
-          <l-marker :lat-lng="marker" :icon="icon">
-            <l-popup :content="'text hola'"></l-popup>
-          </l-marker>
+          <div class="marker" v-for="scientist in scientists">
+            <l-marker :lat-lng="scientist.marker" :icon="scientist.icon">
+              <l-popup>
+                <div class="ui card">
+                  <div class="image">
+                    <img v-bind:src="scientist.img">
+                  </div>
+                  <div class="content">
+                    <a class="header">{{scientist.name}}</a>
+                    <div class="meta">
+                      <span class="date">{{scientist.birth}}</span>
+                    </div>
+                    <div class="description">
+                      {{scientist.biography}}
+                    </div>
+                  </div>
+                  <div class="extra content">
+                    <a>
+                      <i class="user icon"></i>
+                      22 Friends
+                    </a>
+                  </div>
+                </div>                
+              </l-popup>
+
+            </l-marker>  
+          </div>
         </l-map>
-        <div class="ui card" v-for="scientist in scientists">
-          <div class="image">
-            <img v-bind:src="scientist.img">
-          </div>
-          <div class="content">
-            <a class="header">{{scientist.name}}</a>
-            <div class="meta">
-              <span class="date">{{scientist.birth}}</span>
-            </div>
-            <div class="description">
-              {{scientist.biography}}
-            </div>
-          </div>
-          <div class="extra content">
-            <a>
-              <i class="user icon"></i>
-              22 Friends
-            </a>
-          </div>
-        </div>
+
+        <input type="range" min="5" max="10" step="1" 
+   oninput="showVal(this.value)" onchange="showVal(this.value)">
+        <br>
+
+        <input id="input" type="range" min="5" max="10" step="1" >
     </div>
     <script type="text/javascript" src="./index.js"></script>
 </body>
