@@ -40,47 +40,51 @@
 <body>
 
     <div id="app">
-      <l-map :zoom="13" :center="center">
+      <!-- <l-map :zoom="13" :center="center">
           <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
           <l-marker :lat-lng="marker" :icon="icon">
             <l-popup :content="'text hola'"></l-popup>
           </l-marker>
-        </l-map>
+      </l-map> -->
+    
+      <div class="ui card" v-for="scientist in scientists">
+          <!-- <div class="image">
+            <img v-bind:src="scientist.img">
+          </div> -->
 
-      <div v-if="active">
-          <!-- <h2>Hello World!</h2> -->
-          <div class="ui card" v-for="scientist in scientists">
-              <!-- <div class="image">
-                <img v-bind:src="scientist.img">
-              </div> -->
+          <div v-if="active">
+              <!-- <h2>Hello World!</h2> -->
+              <div class="image" style="display: none">
+                  <img v-bind:src="scientist.img" >
+              </div>
               <div class="content">
-                <a class="header">{{scientist.name}}</a>
-                <div class="meta">
-                  <span class="date">{{scientist.birth}}</span>
+                  <a class="header">{{scientist.name}}</a>
+                  <div class="meta">
+                    <span class="date">{{scientist.birth}}</span>
+                  </div>
+                  <div class="description">
+                    {{scientist.biography}}
+                  </div>
                 </div>
-                <div class="description">
-                  {{scientist.biography}}
+                <div class="extra content" style="display: none">
+                  <a>
+                    <i class="user icon"></i>
+                    22 Friends
+                  </a>
                 </div>
-              </div>
-              <div class="extra content">
-                <a>
-                  <i class="user icon"></i>
-                  22 Friends
-                </a>
-              </div>
           </div>
 
-       </div>
-      
-       <div v-on:mouseover="active = !active">
-          <!-- <h1>Hover me!</h1> -->
-          <div class="ui card" v-for="scientist in scientists">
-              <div class="image">
-                <img v-bind:src="scientist.img" >
-              </div>
-          </div>
-       </div>
+          <div v-on:mouseover="active = !active">
+              <!-- <h1>Hover me!</h1> -->
+                  <div class="image">
+                    <img v-bind:src="scientist.img" >
+                  </div>
+    
+           </div>
 
+
+          
+      </div>
 
     </div>
 
