@@ -29,7 +29,7 @@
 </head>
 <body>
     <div id="app">
-        <l-map :zoom="13" :center="center">
+        <l-map :zoom="3" :center="center">
           <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
           <l-marker :lat-lng="marker" :icon="icon">
             <l-popup :content="'text hola'"></l-popup>
@@ -66,16 +66,13 @@
             return {
               url:'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
               attribution:'&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-              center: L.latLng(47.413220, -1.219482),
-              marker: L.latLng(47.413220, -1.219482),
+              center: L.latLng(51.751944,-1.257778),
+              marker: L.latLng(51.751944,-1.257778),
               icon: L.icon({
                   iconUrl: 'https://www.famousbirthdays.com/faces/hawking-stephen-image.jpg',
                   iconSize: [50, 50],
                   iconAnchor: [22, 94],
                   popupAnchor: [-3, -76],
-                  shadowUrl: '',
-                  shadowSize: [68, 95],
-                  shadowAnchor: [22, 94]
               }),
               message: 'Hello Vue!',
               scientists: [
