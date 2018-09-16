@@ -56,19 +56,117 @@
                       22 Friends
                     </a>
                   </div>
-                </div>                
+                </div>
               </l-popup>
 
-            </l-marker>  
+            </l-marker>
           </div>
         </l-map>
         <br>
         <div class="time-line">
-          {{time}}  
+         <div id="numbers">
+          {{time}}
+         </div>
+
           <br>
           <input id="input" type="range" min="500" max="2000" autocomplete="off" v-model="time">
         </div>
     </div>
     <script type="text/javascript" src="./index.js"></script>
+    <style type="text/css">
+                * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+          }
+
+          .input {
+            width: 100px;
+            margin: 100px auto;
+            position: relative;
+          }
+
+          input[type='range'] {
+            display: block;
+            width: 2000px;
+          }
+
+          input[type='range']:focus {
+            outline: none;
+          }
+
+          input[type='range'],
+          input[type='range']::-webkit-slider-runnable-track,
+          input[type='range']::-webkit-slider-thumb {
+            -webkit-appearance: none;
+          }
+
+          input[type=range]::-webkit-slider-thumb {
+            background-color: #777;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #333;
+            border-radius: 50%;
+            margin-top: -9px;
+          }
+
+          input[type=range]::-moz-range-thumb {
+            background-color: #777;
+            width: 15px;
+            height: 15px;
+            border: 3px solid #333;
+            border-radius: 50%;
+          }
+
+          input[type=range]::-ms-thumb {
+            background-color: #777;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #333;
+            border-radius: 50%;
+          }
+
+          input[type=range]::-webkit-slider-runnable-track {
+            background-color: #777;
+            height: 3px;
+          }
+
+          input[type=range]:focus::-webkit-slider-runnable-track {
+            outline: none;
+          }
+
+          input[type=range]::-moz-range-track {
+            background-color: #777;
+            height: 3px;
+          }
+
+          input[type=range]::-ms-track {
+            background-color: #777;
+            height: 3px;
+          }
+
+          input[type=range]::-ms-fill-lower {
+            background-color: HotPink
+          }
+
+          input[type=range]::-ms-fill-upper {
+            background-color: black;
+          }
+
+                  .numbers {
+          width: 30px;
+          height: 26px;
+          position: absolute;
+          z-index: 9;
+          background-color: HotPink;
+          color: white;
+          font-size: 12px;
+          text-align: center;
+          padding-top: 7px;
+          top: -45px;
+        }
+
+
+    </style>
 </body>
 </html>
