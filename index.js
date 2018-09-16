@@ -7,6 +7,7 @@ new Vue({
   components: { LMap, LTileLayer, LMarker, LPopup },
   data() {
     return {
+      time: 1500,
       url:'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
       attribution:'&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
       center: L.latLng(47.413220, -1.219482),
@@ -51,14 +52,8 @@ new Vue({
     }
   },
   methods: {
-    cambiarSaludo() {
-        setTimeout(() => {
-            this.message = "Hola!!!";
-        }, 2000);
+    changeTime(value) {
+      console.log(value);
     },
-    agregarUsuario() {
-        this.cambiarSaludo();
-        this.usuarios.push('OTRO');
-    }
   }
 })

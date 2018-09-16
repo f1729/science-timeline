@@ -18,6 +18,9 @@
         .leaflet-container .leaflet-marker-pane img {
           border-radius: 50%;
         }
+        .time-line {
+          text-align: center;
+        }
     </style>
 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.css">
@@ -59,12 +62,12 @@
             </l-marker>  
           </div>
         </l-map>
-
-        <input type="range" min="5" max="10" step="1" 
-   oninput="showVal(this.value)" onchange="showVal(this.value)">
         <br>
-
-        <input id="input" type="range" min="5" max="10" step="1" >
+        <div class="time-line">
+          {{time}}  
+          <br>
+          <input id="input" type="range" min="500" max="2000" autocomplete="off" v-model="time">
+        </div>
     </div>
     <script type="text/javascript" src="./index.js"></script>
 </body>
