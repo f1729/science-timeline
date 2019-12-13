@@ -34,8 +34,8 @@ function App() {
   ]
 
   return (
-    <div className="App">
-      <h1> Science Timeline!</h1>
+    <div className="App" style={{ textAlign: 'center'}}>
+      <h1 style={{fontFamily: 'initial'}}> Science Timeline!</h1>
       <AppMap scientists={scientists}/>
       <Range
         values={values}
