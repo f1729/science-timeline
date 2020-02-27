@@ -17,7 +17,8 @@ const AppMap = (props)  => {
         {
           scientists.map((scientist, index) => (
             scientist.bplace_geonameid &&
-            <Overlay anchor={[scientist.bplace_geonameid.lat + Math.random() * 5, scientist.bplace_geonameid.lon + Math.random() * 5]} key={index}>
+            <Overlay anchor={[scientist.bplace_geonameid.lat + Math.random() * 5, scientist.bplace_geonameid.lon + Math.random() * 5]} 
+                     key={index}>
               <img src={`https://pantheon.world/images/profile/people/${scientist.id}.jpg`}
                    style={{ height: 15, width: 15, cursor: 'pointer', borderRadius: '50%'}}
                    onClick={() => { openData(scientist)} } alt={scientist.name}
